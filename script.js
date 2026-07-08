@@ -1,6 +1,7 @@
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 const navbar = document.querySelector('.navbar');
+const brandLink = document.querySelector('.brand');
 const contactForm = document.querySelector('[data-contact-form]');
 const toastContainer = document.querySelector('.toast-container');
 
@@ -26,6 +27,15 @@ if (menuToggle && navLinks) {
 
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') closeMenu();
+  });
+}
+
+if (brandLink) {
+  brandLink.addEventListener('click', (event) => {
+    event.preventDefault();
+    closeMenu();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.history.replaceState(null, '', window.location.pathname + window.location.search);
   });
 }
 
