@@ -1,0 +1,17 @@
+{
+  "name": "emergency-equipment-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Emergency Equipment Sales & Service website with Neon-backed contact form.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "init-db": "node scripts/init-db.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "pg": "^8.16.3"
+  }
+}
