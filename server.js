@@ -141,6 +141,11 @@ app.get('/script.js', (_req, res) => {
   res.sendFile(path.join(publicDir, 'script.js'));
 });
 
+app.get('/favicon.ico', (_req, res) => {
+  res.type('image/svg+xml');
+  res.sendFile(path.join(assetsDir, 'favicon.svg'));
+});
+
 app.get(['/', '/index.html'], (_req, res) => {
   res.sendFile(path.join(publicDir, 'index.html'));
 });
