@@ -143,7 +143,7 @@ app.get('/script.js', (_req, res) => {
 
 app.get('/favicon.ico', (_req, res) => {
   res.type('image/svg+xml');
-  res.sendFile(path.join(assetsDir, 'favicon.svg'));
+  res.sendFile(path.join(assetsDir, 'favicon.png'));
 });
 
 app.get(['/', '/index.html'], (_req, res) => {
